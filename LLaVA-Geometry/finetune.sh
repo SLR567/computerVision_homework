@@ -15,19 +15,20 @@
 ################## LLaMA-2 ##################
 
 python llava/train/train.py \
+    --lora_enable True \
     --model_name_or_path ./checkpoints/llava-v1.5-7b \
     --version v1 \
     --data_path ./playground/data/GeomVerse/TRAIN/TRAIN_MIX/data_cot.jsonl \
     --image_folder ./playground/data \
-    --vision_tower openai/clip-vit-large-patch14 \
+    --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_vision_select_layer -2 \
     --mm_use_im_start_end False \
     --mm_use_im_patch_token False \
     --bf16 True \
     --output_dir ./checkpoints/llava-v1.5-7b-finetune-cot \
     --num_train_epochs 1 \
-    --per_device_train_batch_size 16 \
-    --per_device_eval_batch_size 4 \
+    --per_device_train_batch_size 1 \
+    --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 1 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
