@@ -1,0 +1,209 @@
+{
+    "os": "Linux-5.15.0-46-generic-x86_64-with-glibc2.31",
+    "python": "3.10.13",
+    "heartbeatAt": "2024-04-03T03:57:11.982336",
+    "startedAt": "2024-04-03T03:57:11.258328",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--lora_enable",
+        "True",
+        "--model_name_or_path",
+        "./checkpoints/llava-v1.5-7b",
+        "--version",
+        "v1",
+        "--data_path",
+        "./playground/data/GeomVerse/TRAIN/TRAIN_MIX/data_cot.jsonl",
+        "--image_folder",
+        "./playground/data",
+        "--vision_tower",
+        "openai/clip-vit-large-patch14-336",
+        "--mm_vision_select_layer",
+        "-2",
+        "--mm_use_im_start_end",
+        "False",
+        "--mm_use_im_patch_token",
+        "False",
+        "--bf16",
+        "True",
+        "--output_dir",
+        "./checkpoints/llava-v1.5-7b-finetune-cot",
+        "--num_train_epochs",
+        "1",
+        "--per_device_train_batch_size",
+        "1",
+        "--per_device_eval_batch_size",
+        "1",
+        "--gradient_accumulation_steps",
+        "1",
+        "--evaluation_strategy",
+        "no",
+        "--save_strategy",
+        "steps",
+        "--save_steps",
+        "50000",
+        "--save_total_limit",
+        "1",
+        "--learning_rate",
+        "2e-5",
+        "--weight_decay",
+        "0.",
+        "--warmup_ratio",
+        "0.03",
+        "--lr_scheduler_type",
+        "cosine",
+        "--logging_steps",
+        "1",
+        "--tf32",
+        "True",
+        "--model_max_length",
+        "2048",
+        "--gradient_checkpointing",
+        "True",
+        "--dataloader_num_workers",
+        "4",
+        "--lazy_preprocess",
+        "True",
+        "--report_to",
+        "wandb"
+    ],
+    "state": "running",
+    "program": "/home/ubuntu-user/LLaVA/llava/train/train.py",
+    "codePathLocal": "llava/train/train.py",
+    "codePath": "llava/train/train.py",
+    "git": {
+        "remote": "https://github.com/haotian-liu/LLaVA.git",
+        "commit": "9a26bd1435b4ac42c282757f2c16d34226575e96"
+    },
+    "email": "you@example.com",
+    "root": "/home/ubuntu-user/LLaVA",
+    "host": "WS1-1",
+    "username": "ubuntu-user",
+    "executable": "/home/ubuntu-user/anaconda3/envs/llava/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2042.75945,
+        "min": 800.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 1036.512,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2639.994,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 1244.077,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2407.01,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3600.0
+        },
+        {
+            "current": 2100.0,
+            "min": 800.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 917.5653381347656,
+            "used": 397.21543884277344
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 62.50066375732422
+    }
+}
